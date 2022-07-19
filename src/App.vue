@@ -32,7 +32,7 @@ export default {
     Custom_slider,
   },
   data: () => ({
-    currentTime: 50000000000000,
+    currentTime: 5,
     sliderLength: 0,
     pages: []
   }),
