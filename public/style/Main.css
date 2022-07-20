@@ -1,6 +1,7 @@
 body {
   font-size: 1em;
   font-family: "Roboto";
+  padding-top: 4%;
 }
 
 .class {
@@ -30,6 +31,7 @@ body {
 }
 .content h1 {
   color: #527CCD;
+  font-weight: bold;
 }
 
 .form {

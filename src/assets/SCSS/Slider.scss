@@ -2,7 +2,7 @@ $textColor: #7195d9;
 $borderColor: #C8D9FB;
 $headerColor: #527CCD;
 
-body{font-size: 1em; font-family: 'Roboto';}
+body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
 .class{display: none;}
 @media screen and (max-width: 640px){
   body{font-size: 0.6em;}
@@ -19,6 +19,7 @@ body{font-size: 1em; font-family: 'Roboto';}
   justify-content: center;
   h1{
     color: $headerColor;
+    font-weight:bold;
   }
 }
 
