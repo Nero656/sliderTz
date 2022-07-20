@@ -1,11 +1,19 @@
 <template>
   <div class="slider">
-    <div v-bind:key="id" v-for="(item, id) in slides" class="slide">
-      <Custom_slide
-          :date=item.date
-          :title=item.title
-          :info=item.info
-          :photo_url=item.photo_url
+    <div v-bind:key="id" v-for="(item, id) in slides" class="slide" @click="itemEnableClick(id)" >
+      <Custom_slide :ref="item"
+                    :date=item.date
+                    :title=item.title
+                    :info=item.info
+                    :photo_url=item.photo_url
+      />
+    </div>
+    <div  @click="itemDisableClick">
+      <Custom_drop v-if="itemEnable"
+                   :date="dropSlide[0].date"
+                   :photo_url="dropSlide[0].photo_url"
+                   :title="dropSlide[0].title"
+                   :info="dropSlide[0].info"
       />
     </div>
   </div>
@@ -13,12 +21,16 @@
 
 <script>
 import Custom_slide from "@/components/Custom_slide";
+import Custom_drop from "@/components/Custom_drop";
 
 export default {
   name: "Custom_slider",
-  components: {Custom_slide},
+  components: {Custom_slide, Custom_drop},
   data: () => ({
-    slides: []
+    itemEnable: false,
+    id: 0,
+    slides: [],
+    dropSlide:[]
   }),
 
   mounted() {
@@ -58,18 +70,29 @@ export default {
     slideNext() {
       this.slides.unshift(this.slides[this.slides.length - 1])
       this.slides.pop();
-
     },
 
     slideBack() {
-      this.slides.push(this.slides[0]);
+      this.slides.push(this.slides[0])
       this.slides.shift()
     },
 
-    slideClick (id){
-      this.slides.unshift(this.slides[id]);
+    slideClick(id) {
+      this.slides.unshift(this.slides[id])
       this.slides.pop();
-      // this.slides.slice(0, id);
+    },
+
+    itemEnableClick(id) {
+      this.dropSlide.push({
+        date: this.slides[id].date,
+        title: this.slides[id].title,
+        info: this.slides[id].info,
+        photo_url: this.slides[id].photo_url
+      })
+      this.itemEnable = true
+    },
+    itemDisableClick(){
+      this.itemEnable = false
     }
   },
 }
