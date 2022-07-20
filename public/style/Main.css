@@ -118,6 +118,11 @@ body {
     width: 20em;
   }
 }
+.drop_item {
+  position: fixed;
+  top: 50%;
+}
+
 .slide {
   border: #C8D9FB solid 1px;
   color: #7195d9;

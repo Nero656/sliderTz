@@ -126,6 +126,11 @@ body{font-size: 1em;}
   }
 }
 
+.drop_item{
+  position: fixed;
+  top: 50%;
+}
+
 
 .slide {
   border: $borderColor solid 1px;
