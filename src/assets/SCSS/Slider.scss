@@ -3,6 +3,7 @@ $borderColor: #C8D9FB;
 $headerColor: #527CCD;
 
 body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
+p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line-height: 22px;}
 .class{display: none;}
 @media screen and (max-width: 640px){
   body{font-size: 0.6em;}
@@ -19,7 +20,11 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
   justify-content: center;
   h1{
     color: $headerColor;
-    font-weight:bold;
+    //font-weight:bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
   }
 }
 
@@ -35,16 +40,20 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
   flex-direction: row;
   justify-content: space-between;
   transition-duration: 2s;
+  width: 99%;
 
   span{
-    display: flex;
+    margin-top: 2.5%;
   }
+
+  .sidebar{
+    margin-right: 10%;
+  }
+
   button{
-    width: 2.5em;
-    font-size: 1.5em;
     color: $headerColor;
-    padding: 20px 20px 20px 20px;
-    margin-left: 50px;
+    padding: 20px 25px 20px 25px;
+    margin-left: 20px;
     border: $borderColor solid 1px;
     background-color: transparent;
     cursor: pointer;
@@ -59,6 +68,7 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
     border-color: $textColor;
     background-color: $borderColor;
   }
+
   margin-bottom: 5%;
 }
 
@@ -68,6 +78,7 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
   align-items: flex-start;
   width: 2em;
   z-index: 1;
+  margin-right: 12%;
 
   div{
     display: flex;
@@ -96,7 +107,7 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
   top: 0;
   left: 0;
   cursor: pointer;
-  background-color: rgba(113, 148, 216, 0.35);
+  background-color: rgba(144, 144, 144, 0.35);
   z-index: 1000;
 }
 
@@ -110,7 +121,7 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
   transform: translate(-50%, -50%);
   background-color: white;
   height: 70%;
-  width: 30%;
+  width: 15em;
   border: $borderColor solid 1px;
   color: $textColor;
   padding: 10px 20px 10px 20px;
@@ -131,9 +142,7 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
   .sliderPages{
     //align-items: center;
     margin-right: 13em;
-    div{
 
-    }
     span{
       width: 4em;
       background-color: #CCDDFF;
@@ -161,7 +170,7 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
 
 .slide {
   border: $borderColor solid 1px;
-  color: $textColor;
+  color: $headerColor;
   width: 20em;
   margin-right: 1%;
   cursor: pointer;
@@ -171,8 +180,23 @@ body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
     flex-direction: column;
     align-items: start;
     padding: 10px 20px 10px 20px;
+
   }
 
+  .toolName{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .toolDis{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+  }
   &:hover{
     border: $textColor solid 1px;
   }

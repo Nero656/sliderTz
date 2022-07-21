@@ -4,6 +4,14 @@ body {
   padding-top: 4%;
 }
 
+p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+}
+
 .class {
   display: none;
 }
@@ -31,7 +39,10 @@ body {
 }
 .content h1 {
   color: #527CCD;
-  font-weight: bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
 }
 
 .form {
@@ -46,17 +57,19 @@ body {
   flex-direction: row;
   justify-content: space-between;
   transition-duration: 2s;
+  width: 99%;
   margin-bottom: 5%;
 }
 .content_head span {
-  display: flex;
+  margin-top: 2.5%;
+}
+.content_head .sidebar {
+  margin-right: 10%;
 }
 .content_head button {
-  width: 2.5em;
-  font-size: 1.5em;
   color: #527CCD;
-  padding: 20px 20px 20px 20px;
-  margin-left: 50px;
+  padding: 20px 25px 20px 25px;
+  margin-left: 20px;
   border: #C8D9FB solid 1px;
   background-color: transparent;
   cursor: pointer;
@@ -76,6 +89,7 @@ body {
   align-items: flex-start;
   width: 2em;
   z-index: 1;
+  margin-right: 12%;
 }
 .sliderPages div {
   display: flex;
@@ -101,7 +115,7 @@ body {
   top: 0;
   left: 0;
   cursor: pointer;
-  background-color: rgba(113, 148, 216, 0.35);
+  background-color: rgba(144, 144, 144, 0.35);
   z-index: 1000;
 }
 
@@ -115,7 +129,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: white;
   height: 70%;
-  width: 30%;
+  width: 15em;
   border: #C8D9FB solid 1px;
   color: #7195d9;
   padding: 10px 20px 10px 20px;
@@ -155,7 +169,7 @@ body {
 
 .slide {
   border: #C8D9FB solid 1px;
-  color: #7195d9;
+  color: #527CCD;
   width: 20em;
   margin-right: 1%;
   cursor: pointer;
@@ -166,6 +180,20 @@ body {
   flex-direction: column;
   align-items: start;
   padding: 10px 20px 10px 20px;
+}
+.slide .toolName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.slide .toolDis {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
 }
 .slide:hover {
   border: #7195d9 solid 1px;

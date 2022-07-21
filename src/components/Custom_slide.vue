@@ -6,7 +6,7 @@
       />
       <p>{{date}}</p>
       <h3 class="toolName">{{ title }}</h3>
-      <p>{{info}}</p>
+      <p class="toolDis">{{info}}</p>
     </div>
 </template>
 

@@ -14,8 +14,16 @@
           </div>
         </div>
         <span>
-          <button @click="parentMethodSlideNext()" >ᐸ</button>
-          <button @click="parentMethodSlideBack()">ᐳ</button>
+          <button @click="parentMethodSlideNext()">
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1L1 11L11 21" stroke="#527CCD"/>
+            </svg>
+          </button>
+          <button @click="parentMethodSlideBack()">
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L11 11L1 21" stroke="#527CCD"/>
+            </svg>
+          </button>
         </span>
       </div>
       <Custom_slider ref="Custom_slider"/>
