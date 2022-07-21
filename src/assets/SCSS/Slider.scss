@@ -3,7 +3,7 @@ $borderColor: #C8D9FB;
 $headerColor: #527CCD;
 
 body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
-p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line-height: 22px;}
+p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line-height: 22px; opacity: 0.6;}
 .class{display: none;}
 @media screen and (max-width: 640px){
   body{font-size: 0.6em;}
