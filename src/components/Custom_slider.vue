@@ -93,6 +93,7 @@ export default {
     },
     itemDisableClick(){
       this.itemEnable = false
+      this.dropSlide = []
     }
   },
 }
