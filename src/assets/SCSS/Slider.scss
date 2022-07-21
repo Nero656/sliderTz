@@ -2,23 +2,50 @@ $textColor: #7195d9;
 $borderColor: #C8D9FB;
 $headerColor: #527CCD;
 
-body{font-size: 1em; font-family: 'Roboto'; padding-top: 4%}
-p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line-height: 22px;}
-.class{display: none;}
-@media screen and (max-width: 640px){
-  body{font-size: 0.6em;}
-  .class{display: none;}
+body {
+  font-size: 1em;
+  font-family: 'Roboto';
+  padding-top: 4%;
 }
-@media screen and (max-width: 1080px){
-  body{font-size: 0.8em;}
-  .class{display: block;}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.class {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    font-size: 0.8em;
+  }
+}
+
+
+.sliderPagesMob {
+  display: none;
+}
+
+.toolDate{
+  opacity: 0.6;
 }
 
 .content {
   display: flex;
   align-items: center;
   justify-content: center;
-  h1{
+
+  h1 {
     color: $headerColor;
     //font-weight:bold;
     font-style: normal;
@@ -35,22 +62,20 @@ p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line
   margin-right: 10%;
 }
 
-.content_head{
+.content_head {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   transition-duration: 2s;
   width: 99%;
-
-  span{
+  span {
     margin-top: 2.5%;
   }
-
-  .sidebar{
+  .sidebar {
     margin-right: 10%;
-  }
 
-  button{
+  }
+  button {
     color: $headerColor;
     padding: 20px 25px 20px 25px;
     margin-left: 20px;
@@ -59,12 +84,12 @@ p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line
     cursor: pointer;
   }
 
-  button:hover{
+  button:hover {
     border-color: $borderColor;
     background-color: $borderColor;
   }
 
-  button:active{
+  button:active {
     border-color: $textColor;
     background-color: $borderColor;
   }
@@ -72,7 +97,7 @@ p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line
   margin-bottom: 5%;
 }
 
-.sliderPages{
+.sliderPages {
   display: inline-flex;
   align-self: center;
   align-items: flex-start;
@@ -80,17 +105,17 @@ p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line
   z-index: 1;
   margin-right: 12%;
 
-  div{
+  div {
     display: flex;
   }
 
-  span{
+  span {
     width: 7em;
     height: .2em;
     background-color: $borderColor;
   }
 
-  .activeSpan{
+  .activeSpan {
     background-color: $textColor;
   }
 }
@@ -100,7 +125,7 @@ p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line
   align-content: flex-start;
 }
 
-.drop_back{
+.drop_back {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -111,7 +136,7 @@ p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line
   z-index: 1000;
 }
 
-.drop_item{
+.drop_item {
   position: fixed;
   display: inline-flex;
   align-self: center;
@@ -126,25 +151,75 @@ p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line
   padding: 10px 20px 10px 20px;
 }
 
+.drop_item {
+  position: fixed;
+  top: 50%;
+}
+
+.slide {
+  border: $borderColor solid 1px;
+  color: $headerColor;
+  width: 20em;
+  margin-right: 1%;
+  cursor: pointer;
+
+  .slideTool {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 20px 10px 20px;
+  }
+
+  .toolName {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .toolDis {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  &:hover {
+    border: $textColor solid 1px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 1080px) {
+  .form{
+    margin: 0;
+  }
 
-  .content_head{
-    flex-direction: column;
-    align-items: center;
-    button{
-      width: 4.5em;
-      margin: 10px 0 0 0;
+  .content {
+    h1 {
+      color: $headerColor;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 60px;
     }
   }
 
-  .sliderPages{
-    //align-items: center;
-    margin-right: 13em;
+  .content_head {
+    flex-direction: row;
+    align-items: center;
 
-    span{
-      width: 4em;
-      background-color: #CCDDFF;
+    span {
+      display: none
+    }
+
+    button {
+      width: 4.5em;
+      margin: 10px 0 0 0;
     }
   }
 
@@ -153,57 +228,51 @@ p{font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 12px;line
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+
+    .slide{
+      margin-top: 3%;
+      width: 25em;
+      height: 35em;
+    }
   }
 
-  .slide{
-    margin-top: 3%;
-    width: 20em;
-  }
-}
 
-.drop_item{
-  position: fixed;
-  top: 50%;
-}
-
-
-.slide {
-  border: $borderColor solid 1px;
-  color: $headerColor;
-  width: 20em;
-  margin-right: 1%;
-  cursor: pointer;
-  .slideTool{
+  .sliderPagesMob {
     display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: start;
-    padding: 10px 20px 10px 20px;
+    align-self: start;
+    align-items: center;
+    width: 14.5%;
+    margin-top: 3%;
 
+    div {
+      display: flex;
+    }
+
+    button {
+      color: $headerColor;
+      padding: 60% 65% 60% 65%;
+      border: $borderColor solid 1px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: $borderColor;
+      background-color: $borderColor;
+    }
+
+
+    span {
+      height: .2em;
+      width: 3em;
+      background-color: #CCDDFF;
+    }
+    .activeSpan {
+      background-color: $textColor;
+    }
   }
 
-  .toolName{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+  .sliderPages {
+    display: none;
   }
-  .toolDis{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 22px;
-  }
-  &:hover{
-    border: $textColor solid 1px;
-  }
-
-  img{
-    width: 100%;
-  }
-
 }
-
-

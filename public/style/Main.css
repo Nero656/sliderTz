@@ -5,7 +5,6 @@ body {
 }
 
 p {
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -20,18 +19,20 @@ p {
   body {
     font-size: 0.6em;
   }
-  .class {
-    display: none;
-  }
 }
 @media screen and (max-width: 1080px) {
   body {
     font-size: 0.8em;
   }
-  .class {
-    display: block;
-  }
 }
+.sliderPagesMob {
+  display: none;
+}
+
+.toolDate {
+  opacity: 0.6;
+}
+
 .content {
   display: flex;
   align-items: center;
@@ -134,33 +135,6 @@ p {
   padding: 10px 20px 10px 20px;
 }
 
-@media screen and (max-width: 1080px) {
-  .content_head {
-    flex-direction: column;
-    align-items: center;
-  }
-  .content_head button {
-    width: 4.5em;
-    margin: 10px 0 0 0;
-  }
-  .sliderPages {
-    margin-right: 13em;
-  }
-  .sliderPages span {
-    width: 4em;
-    background-color: #CCDDFF;
-  }
-  .slider {
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-  }
-  .slide {
-    margin-top: 3%;
-    width: 20em;
-  }
-}
 .drop_item {
   position: fixed;
   top: 50%;
@@ -181,14 +155,12 @@ p {
   padding: 10px 20px 10px 20px;
 }
 .slide .toolName {
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
 }
 .slide .toolDis {
-  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -199,6 +171,73 @@ p {
 }
 .slide img {
   width: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+  .form {
+    margin: 0;
+  }
+  .content h1 {
+    color: #527CCD;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 60px;
+  }
+  .content_head {
+    flex-direction: row;
+    align-items: center;
+  }
+  .content_head span {
+    display: none;
+  }
+  .content_head button {
+    width: 4.5em;
+    margin: 10px 0 0 0;
+  }
+  .slider {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .slider .slide {
+    margin-top: 3%;
+    width: 25em;
+    height: 35em;
+  }
+  .sliderPagesMob {
+    display: flex;
+    align-self: start;
+    align-items: center;
+    width: 14.5%;
+    margin-top: 3%;
+  }
+  .sliderPagesMob div {
+    display: flex;
+  }
+  .sliderPagesMob button {
+    color: #527CCD;
+    padding: 60% 65% 60% 65%;
+    border: #C8D9FB solid 1px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .sliderPagesMob button:hover {
+    border-color: #C8D9FB;
+    background-color: #C8D9FB;
+  }
+  .sliderPagesMob span {
+    height: 0.2em;
+    width: 3em;
+    background-color: #CCDDFF;
+  }
+  .sliderPagesMob .activeSpan {
+    background-color: #7195d9;
+  }
+  .sliderPages {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=Main.css.map */

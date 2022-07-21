@@ -1,14 +1,26 @@
 <template>
-  <div class="slider">
-    <div v-bind:key="id" v-for="(item, id) in slides" class="slide" @click="itemEnableClick(id)" >
-      <Custom_slide :ref="item"
-                    :date=item.date
-                    :title=item.title
-                    :info=item.info
-                    :photo_url=item.photo_url
-      />
+  <div>
+    <div class="slider" v-if="width>1080">
+      <div v-bind:key="id" v-for="(item, id) in slides" class="slide" @click="itemEnableClick(id)">
+          <Custom_slide :ref="item"
+                        :date=item.date
+                        :title=item.title
+                        :info=item.info
+                        :photo_url=item.photo_url
+          />
+      </div >
     </div>
-    <div  @click="itemDisableClick">
+    <div class="slider" v-if="width<1080" @click="itemEnableClick(0)">
+      <div  class="slide">
+        <Custom_slide
+                      :date=slides[0].date
+                      :title=slides[0].title
+                      :info=slides[0].info
+                      :photo_url=slides[0].photo_url
+        />
+    </div>
+    </div>
+    <div @click="itemDisableClick">
       <Custom_drop v-if="itemEnable"
                    :date="dropSlide[0].date"
                    :photo_url="dropSlide[0].photo_url"
@@ -27,21 +39,21 @@ export default {
   name: "Custom_slider",
   components: {Custom_slide, Custom_drop},
   data: () => ({
+    width: 0,
     itemEnable: false,
-    id: 0,
-    slides: [],
-    dropSlide:[]
+    slides: [{
+      id: 1,
+      date: "17.07.2022",
+      title: "Ким и Валерия Брейтбурги написали книгу про искусство",
+      info: "Работа над книгой велась более пяти лет, и действенные методики, описанные в ней," +
+          " созданные в результате анализа и синтеза идей…",
+      photo_url: "/images/empty_photo.png"
+    }],
+    dropSlide: []
   }),
-
   mounted() {
-    this.slides.push({
-          id: 1,
-          date: "17.07.2022",
-          title: "Ким и Валерия Брейтбурги написали книгу про искусство",
-          info: "Работа над книгой велась более пяти лет, и действенные методики, описанные в ней," +
-              " созданные в результате анализа и синтеза идей…",
-          photo_url: "/images/empty_photo.png"
-        },
+    this.width = window.innerWidth;
+    this.slides.push(
         {
           id: 2,
           date: "12.07.2022",
@@ -91,7 +103,7 @@ export default {
       })
       this.itemEnable = true
     },
-    itemDisableClick(){
+    itemDisableClick() {
       this.itemEnable = false
       this.dropSlide = []
     }

@@ -4,7 +4,7 @@
           v-bind:src="photo_url"
           :alt=info
       />
-      <p style=" opacity: 0.6;">{{date}}</p>
+      <p class="toolDate">{{date}}</p>
       <h3 class="toolName">{{ title }}</h3>
       <p class="toolDis">{{info}}</p>
     </div>
